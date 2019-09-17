@@ -20,11 +20,11 @@ public abstract class Problem {
         this.goal = goal;
     }
     
-    public abstract ArrayList<Node> Actions (Node state);
+    public abstract ArrayList<Aresta> Actions (String state);
     
-    public abstract int value (String state);
+ //   public abstract int value (String state);
     
-    public abstract Node result (String state, Node action);
+    public abstract Node result (String state, int action);
         
     public boolean goal_test(String state){
         if(state.equals((this.goal.getState())))
@@ -32,7 +32,7 @@ public abstract class Problem {
         return false;
     }
     
-    public abstract int path_cost(int c, String state1, Node Action, String state2);   
+    public abstract int path_cost(int c, String state1, int Action);   
       
     
 }

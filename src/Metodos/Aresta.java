@@ -9,31 +9,34 @@ package Metodos;
  *
  * @author Gi Benvenuto
  */
-public class Aresta implements Comparable<Aresta>{
-        private int v1;
-        private int v2;
-        private int valor;
+public class Aresta implements Comparable<Aresta> {
 
-        public Aresta(int v1, int v2, int valor) {
-            this.v1 = v1;
-            this.v2 = v2;
-            this.valor = valor;
-        }
-        
-        public int getV1() {
-            return v1;
-        }
+    private Node dest;
+    private int valor;
 
-        public int getV2() {
-            return v2;
-        }
+    public Aresta(Node dest, int valor) {
+        this.dest = dest;
+        this.valor = valor;
+    }
 
-        public int getValor() {
-            return valor;
-        }
-        
-        public int compareTo(Aresta a){
-            if(this.valor > a.getValor()) return 1;
-            else return -1;
+    public int getValor() {
+        return valor;
+    }
+
+    public Node getDest() {
+        return dest;
+    }
+
+    public void setDest(Node dest) {
+        this.dest = dest;
+    }
+
+    @Override
+    public int compareTo(Aresta a) {
+        if (this.valor > a.getValor()) {
+            return 1;
+        } else {
+            return -1;
         }
     }
+}

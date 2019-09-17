@@ -1,31 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.mycompany.buscas;
+package Metodos;
 
+
+
+import Metodos.Aresta;
 import java.util.ArrayList;
+import java.util.Map;
 
 /**
  *
  * @author Gi
  */
-public class Node {
+public class Node extends Object{
     private String state;
     private Node parent;
-    private ArrayList<Node> action;
+    private ArrayList<Aresta> action;
     private int path_cost;
     private int depth;
 
-    public Node(String state, Node parent, ArrayList<Node> action, int path_cost) {
+    public Node(String state, ArrayList<Aresta> action) {
         this.state = state;
-        this.parent = parent;
         this.action = action;
-        this.path_cost = path_cost;
-        if (this.parent != null){
-            this.depth = this.parent.getDepth() + 1;
-        }
     }
 
     public String getState() {
@@ -42,13 +36,14 @@ public class Node {
 
     public void setParent(Node parent) {
         this.parent = parent;
+        this.depth = this.parent.getDepth() + 1;
     }
 
-    public ArrayList<Node> getActions() {
+    public ArrayList<Aresta> getActions() {
         return action;
     }
 
-    public void setActions(ArrayList<Node> action) {
+    public void setActions(ArrayList<Aresta> action) {
         this.action = action;
     }
 
@@ -64,9 +59,7 @@ public class Node {
         return depth;
     }
 
-    public void setDepth(int depth) {
-        this.depth = depth;
-    }
+    
     
     
 }

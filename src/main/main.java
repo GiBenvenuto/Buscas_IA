@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package trabGrafos;
+package main;
 
 import IUGrafos.IUPrincipal;
 import Metodos.Controlador;
@@ -13,7 +13,7 @@ import static java.awt.SystemColor.control;
  *
  * @author Gi Benvenuto
  */
-public class Trabalho_Grafos {
+public class main {
 
     /**
      * @param args the command line arguments
