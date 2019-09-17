@@ -2,9 +2,8 @@ package Metodos;
 
 
 
-import Metodos.Aresta;
+import java.awt.Point;
 import java.util.ArrayList;
-import java.util.Map;
 
 /**
  *
@@ -16,10 +15,19 @@ public class Node extends Object{
     private ArrayList<Aresta> action;
     private int path_cost;
     private int depth;
+    private Point p;
 
-    public Node(String state, ArrayList<Aresta> action) {
+    public Point getP() {
+        return p;
+    }
+
+    public void setP(Point p) {
+        this.p = p;
+    }
+
+    public Node(String state, Point p) {
         this.state = state;
-        this.action = action;
+        this.p = p;
     }
 
     public String getState() {

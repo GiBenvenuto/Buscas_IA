@@ -27,6 +27,11 @@ public class GraphProblem extends Problem{
         this.graph = new HashMap<String, Node>();
     }
 
+    public void setGraph(Map<String, Node> graph) {
+        this.graph = graph;
+    }
+    
+
     @Override
     public ArrayList<Aresta> Actions(String state) {
         return graph.get(state).getActions();
